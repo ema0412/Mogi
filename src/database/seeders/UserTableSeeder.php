@@ -16,14 +16,14 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         $user=[
-            'name'=>'saaya',
-            'email'=>'saaya@example.com',
-            'password'=>Hash::make('saayasaaya')
+            'name'=>'sample',
+            'email'=>'hoge@example.com',
+            'password'=>Hash::make('hoge1234')
         ];
         DB::table('users')->insert($user);
         $weight_target=[
             'user_id'=>1,
-            'target_weight'=>51.0
+            'target_weight'=>55.0
         ];
         DB::table('weight_target')->insert($weight_target);
         $weight_log=[
