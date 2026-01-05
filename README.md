@@ -1,10 +1,10 @@
-# PiGLy
+# フリマ
 
 ## 環境構築
 
 ### Docker ビルド
 
-1. git clone git@github.com:/PiGLy.git
+1. git clone git@github.com:ema0412/Mogi.git
 1. docker-compose up -d --build
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※MySQL は、OS によって起動しない場合があるのでそれぞれの PC に合わせて docker-compose.yml ファイルを編集してください。
@@ -43,7 +43,3 @@ DB_PASSWORD=laravel_pass
 
 - 環境開発: http://localhost/login
 - phpMyAdmin: http://localhost:8080/
-
-## ER 図
-
-![image](PiGLy.drawio.png)
