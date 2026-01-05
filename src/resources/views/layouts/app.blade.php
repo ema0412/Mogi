@@ -15,13 +15,13 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <h1 class="header__logo">PiGLy</h1>
+            <h1 class="header__logo">COACHTECH</h1>
             <nav class="header__nav">
                 <ul class="header__list">
                     <li class="header__list-item">
                         <form action="/weight_logs/goal_setting" class="header__form" method="get">
                             @csrf
-                            <button class="header__form--target">目標体重設定</button>
+                            <button class="header__form--target">出品</button>
                         </form>
                     </li>
                     <li class="header__list-item">

@@ -6,31 +6,6 @@
 
 @section('content')
 <div class="content">
-    <div class="heading">
-        <div class="heading__group">
-            <h5 class="heading__title">目標体重</h5>
-            <div class="heading__number">
-                {{$weightTarget->target_weight}}
-                <span class="heading__kg">kg</span>
-            </div>
-        </div>
-        <span class="line"></span>
-        <div class="heading__group">
-            <h5 class="heading__title">目標まで</h5>
-            <div class="heading__number">
-                {{$weightTarget->target_weight - $latestWeightLog->weight}}
-                <span class="heading__kg">kg</span>
-            </div>
-        </div>
-        <span class="line"></span>
-        <div class="heading__group">
-            <h5 class="heading__title">最新体重</h5>
-            <div class="heading__number">
-                {{$latestWeightLog->weight}}
-                <span class="heading__kg">kg</span>
-            </div>
-        </div>
-    </div>
     <div class="weight-logs">
         <div class="weight-logs__content">
             <div class="weight-logs__menu">
@@ -62,25 +37,11 @@
             @endif
             <table class="weight-logs__table">
                 <tr class="weight-logs__table--row">
-                    <th class="weight-logs__table--header-date">日付</th>
-                    <th class="weight-logs__table--header-weight">体重</th>
-                    <th class="weight-logs__table--header-calory">食事摂取カロリー</th>
-                    <th class="weight-logs__table--header-activity">運動時間</th>
+                    <th class="weight-logs__table--header-activity">画像</th>
                     <th class="weight-logs__table--header-blank"></th>
                 </tr>
                 @foreach($weightLogs as $weightLog)
                 <tr class="weight-logs__table--row">
-                    <td class="weight-logs__table--content">
-                        {{$weightLog->date}}
-                    </td>
-                    <td class="weight-logs__table--content">
-                        {{$weightLog->weight}}
-                        <span class="weight-logs__table--content-unit">kg</span>
-                    </td>
-                    <td class="weight-logs__table--content">
-                        {{$weightLog->calories}}
-                        <span class="weight-logs__table--content-unit">cal</span>
-                    </td>
                     <td class="weight-logs__table--content">
                         {{$weightLog->exercise_time}}
                     </td>

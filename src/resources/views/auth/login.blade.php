@@ -7,7 +7,7 @@
 @section('content')
 <div class="login__content">
     <div class="login-form__heading">
-        <h1 class="login-form__heading-title">PiGLy</h1>
+        <h1 class="login-form__heading-title">フリマ</h1>
         <h2 class="login-form__heading-subtitle">ログイン</h2>
     </div>
     <form class="login-form" action="/login" method="post" novalidate>
@@ -47,7 +47,7 @@
         </div>
     </form>
     <div class="register__link">
-        <a class="register__button-submit" href="/register">アカウント作成はこちら</a>
+        <a class="register__button-submit" href="/register">会員登録はこちら</a>
     </div>
 </div>
 @endsection

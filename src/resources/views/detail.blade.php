@@ -7,7 +7,7 @@
 @section('content')
 <div class="detail-content">
     <div class="detail-group">
-        <h2 class="detail-title">Weight Log</h2>
+        <h2 class="detail-title">出品</h2>
         <form class="detail-form" action="{{url('/weight_logs/' . $weightLog['id'] . '/update')}}" method="post" novalidate>
             @csrf
             @method('patch')
@@ -26,11 +26,11 @@
             </div>
             <div class="detail-form__group">
                 <div class="detail-form__heading">
-                    <span class="detail-form__heading-name">体重</span>
+                    <span class="detail-form__heading-name">金額</span>
                 </div>
                 <div class="detail-form__content-unit">
                     <input type="text" class="detail-form__input-weight" name="weight" value="{{old('weight', $weightLog->weight)}}">
-                    <span class="detail-form__input-unit">kg</span>
+                    <span class="detail-form__input-unit">円</span>
                 </div>
                 <div class="detail-error">
                     @error('weight')
@@ -40,11 +40,10 @@
             </div>
             <div class="detail-form__group">
                 <div class="detail-form__heading">
-                    <span class="detail-form__heading-name">摂取カロリー</span>
+                    <span class="detail-form__heading-name">商品説明</span>
                 </div>
                 <div class="detail-form__content-unit">
                     <input type="text" class="detail-form__input-calories" name="calories" value="{{old('calories', $weightLog->calories)}}">
-                    <span class="detail-form__input-unit">cal</span>
                 </div>
                 <div class="detail-error">
                     @error('calories')
@@ -54,10 +53,10 @@
             </div>
             <div class="detail-form__group">
                 <div class="detail-form__heading">
-                    <span class="detail-form__heading-name">運動時間</span>
+                    <span class="detail-form__heading-name">商品の情報</span>
                 </div>
                 <div class="detail-form__content-time">
-                    <input type="time" class="detail-form__input-time" name="exercise_time" value="{{old('exercise_time', $weightLog->exercise_time)}}">
+                    <input type="text" class="detail-form__input-time" name="exercise_time" value="{{old('exercise_time', $weightLog->exercise_time)}}">
                 </div>
                 <div class="detail-error">
                     @error('exercise_time')
@@ -67,10 +66,10 @@
             </div>
             <div class="detail-form__group">
                 <div class="detail-form__heading">
-                    <span class="detail-form__heading-name">運動内容</span>
+                    <span class="detail-form__heading-name">商品へのコメント</span>
                 </div>
                 <div class="detail-form__content">
-                    <textarea name="exercise_content" class="detail-form__textarea" placeholder="運動内容を追加">{{old('exercise_content', $weightLog->exercise_content)}}</textarea>
+                    <textarea name="exercise_content" class="detail-form__textarea" placeholder="コメントを追加">{{old('exercise_content', $weightLog->exercise_content)}}</textarea>
                 </div>
                 <div class="detail-error">
                     @error('exercise_content')
