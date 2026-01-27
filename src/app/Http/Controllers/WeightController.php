@@ -63,18 +63,7 @@ class WeightController extends Controller
         return redirect('/weight_logs');
     }
 
-    public function search(Request $request){
-        $userId=Auth::id();
-        $startDate=$request->start_date;
-        $endDate=$request->end_date;
-        $weightLogs=WeightLog::with('user')->where('user_id', $userId)->DateSearch($startDate, $endDate)->Paginate(8)->appends([
-            'start_date'=>$startDate,
-            'end_date'=>$endDate
-        ]);
-        $latestWeightLog=WeightLog::with('user')->where('user_id', $userId)->orderBy('created_at', 'desc')->first();
-        $weightTarget=WeightTarget::with('user')->where('user_id', $userId)->orderBy('created_at', 'desc')->first();
-        return view('admin', compact('weightLogs', 'weightTarget', 'latestWeightLog', 'startDate', 'endDate'));
-    }
+
 
     public function detail($weightLogId){
         $weightLog=WeightLog::find($weightLogId);

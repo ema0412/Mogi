@@ -8,7 +8,7 @@
 <div class="background">
     <div class="goal-content">
         <h2 class="goal-title">商品の出品</h2>
-        <form method="post" action="/weight_logs/goal_setting" class="goal-setting">
+        <form method="post" action="/mypage" class="goal-setting">
             @csrf
             @method('patch')
             <div class="goal-setting__form">
